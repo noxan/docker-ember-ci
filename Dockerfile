@@ -8,8 +8,8 @@ RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOM_VERS
 
 RUN tar xvf phantomjs-$PHANTOM_VERSION-linux-x86_64.tar.bz2
 
-RUN mv phantomjs-2.1.1-linux-x86_64 /usr/local/share/
-RUN ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/
+RUN mv phantomjs-$PHANTOM_VERSION-linux-x86_64 /usr/local/share/
+RUN ln -sf /usr/local/share/phantomjs-$PHANTOM_VERSION-linux-x86_64/bin/phantomjs /usr/local/bin/
 
 # Install yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
