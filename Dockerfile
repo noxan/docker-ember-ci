@@ -11,9 +11,6 @@ RUN tar xvf phantomjs-$PHANTOM_VERSION-linux-x86_64.tar.bz2
 RUN mv phantomjs-$PHANTOM_VERSION-linux-x86_64 /usr/local/share/
 RUN ln -sf /usr/local/share/phantomjs-$PHANTOM_VERSION-linux-x86_64/bin/phantomjs /usr/local/bin/
 
-# Upgrade npm
-RUN npm install -g npm
-
 # Install yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
